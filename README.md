@@ -1,4 +1,4 @@
-# ML Inference Engineering
+## ML Inference Engineering
 
 This repo is a collection of experiments around getting trained models to run fast in production. Most of the work focuses on what happens *after* training—exporting models, compiling them for specific hardware, squeezing out performance and actually serving them.
 
