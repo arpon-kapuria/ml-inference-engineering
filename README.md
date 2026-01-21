@@ -4,34 +4,7 @@ This repo is a collection of experiments around getting trained models to run fa
 
 ---
 
-## What's in here
-
-Stuff I'm working on or have tried:
-
-- Building inference pipelines from checkpoints
-- Exporting models to ONNX, TorchScript, and other formats
-- Using TensorRT, Torch-TensorRT, and similar tools to speed things up
-- Quantization (FP32 → FP16 → INT8) and figuring out what breaks
-- Benchmarking and profiling to see where time actually goes
-- Setting up serving infrastructure (Triton, TorchServe)
-- Understanding real tradeoffs between throughput, latency, and memory
-
-Not everything here worked. Some experiments hit dead ends. That's part of the process.
-
----
-
-## How it's organized
-
-This isn't a polished library—it's more like a lab notebook:
-
-- **Notebooks** for trying things out and showing results
-- **Scripts** for benchmarks and repeatable experiments
-- **Config files** for serving setups
-- **Notes** on what worked, what didn't, and why
-
----
-
-## Content Index
+### Worklog
 
 Running list of what's here. I'll add to this as I go.
 
@@ -47,13 +20,38 @@ Running list of what's here. I'll add to this as I go.
 
 ---
 
-## Heads up
+### What's in here
+
+Stuff I'm working on or have tried:
+
+- Building inference pipelines from checkpoints
+- Exporting models to ONNX, TorchScript, and other formats
+- Using TensorRT, Torch-TensorRT, and similar tools to speed things up
+- Quantization (FP32 → FP16 → INT8) and figuring out what breaks
+- Benchmarking and profiling to see where time actually goes
+- Setting up serving infrastructure (Triton, TorchServe)
+- Understanding real tradeoffs between throughput, latency, and memory
+
+---
+
+### How it's organized
+
+This isn't a polished library—it's more like a lab notebook:
+
+- **Notebooks** for trying things out and showing results
+- **Scripts** for benchmarks and repeatable experiments
+- **Config files** for serving setups
+- **Notes** on what worked, what didn't, and why
+
+---
+
+### Notes
 
 - This is ongoing work—some things are half-finished
 - Code here is for learning and experimentation, not necessarily production-ready
 
 ---
 
-## Resources
+### Resources
 
 - [NVIDIA TensorRT Quickstart Notebook Series](https://colab.research.google.com/github/NVIDIA/TensorRT/blob/main/quickstart/IntroNotebooks/0.%20Running%20This%20Guide.ipynb#scrollTo=pAKZqp7Qrjmq)
