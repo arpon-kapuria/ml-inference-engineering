@@ -8,13 +8,13 @@ This repo is a collection of experiments around getting trained models to run fa
 
 Running list of what's here. I'll add to this as I go.
 
-- **Transformer Inference Acceleration with Torch-TensorRT**  
+- **Transformer Inference Acceleration: PyTorch to Torch-TensorRT**  
   Taking RoBERTa-base, compiling it with Torch-TensorRT in FP16 and FP32 modes, measuring the speedup and error analysis.  
   → [`transformer_torch_tensorrt.ipynb`](transformer_torch_tensorrt.ipynb)
 
-<!-- - **PyTorch to ONNX Export**  
-  Getting PyTorch models into ONNX format cleanly, dealing with shape issues and ops coverage.  
-  → [`scripts/onnx_export_utils.py`](scripts/onnx_export_utils.py) -->
+- **Transformer Inference Acceleration: PyTorch to ONNX Export**  
+  Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format and measuring the speedup and error analysis. 
+  → [`transformer_pytorch_onnx.ipynb`](transformer_pytorch_onnx.ipynb)
 
 *(Will grow over time)*
 
