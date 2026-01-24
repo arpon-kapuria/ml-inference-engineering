@@ -13,6 +13,8 @@ Running list of what's here. I'll add to this as I go.
 
 - **Transformer Inference Acceleration: PyTorch to ONNX Export**  *[[`Notebook`](transformer_pytorch_onnx.ipynb)]*<br>
   Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format and measuring the speedup and error analysis. 
+- **Transformer Inference Acceleration: PyTorch to ONNX to TensorRT** *[[`Notebook`](transformer_pytorch_onnx_tensorrt.ipynb)]*<br>
+  Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format, then to TensorRT and measuring the speedup and error analysis.
 
 *(Will grow over time)*
 
