@@ -15,8 +15,10 @@ Running list of what's here. I'll add to this as I go.
   Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format and measuring the speedup and error analysis. 
 - **Transformer Inference Acceleration: PyTorch to ONNX to TensorRT** *[[`Notebook`](transformer_pytorch_onnx_tensorrt.ipynb)]*<br>
   Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format, then to TensorRT and measuring the speedup and error analysis.
+- **Model Optimization using LLM Compressor** *[[`Notebook`](model_optimization_llm_compressor.ipynb)]*<br>
+  See how **post-training quantization** works via full precision & compressed model comparisons. Use the `llm-compressor` library to apply a GPTQ recipe that produces a W4A16 quantized model. Test and evaluate the quantized model against the original
 
-*(Will grow over time)*
+<sub><i>(Will grow over time)</i></sub>
 
 ---
 
@@ -26,10 +28,10 @@ Stuff I'm working on or have tried:
 
 - Building inference pipelines from checkpoints
 - Exporting models to ONNX, TorchScript, and other formats
-- Using TensorRT, Torch-TensorRT, and similar tools to speed things up
-- Quantization (FP32 → FP16 → INT8) and figuring out what breaks
+- Efficient model optimization and serving
+- Quantization and figuring out what breaks
 - Benchmarking and profiling to see where time actually goes
-- Setting up serving infrastructure (Triton, TorchServe)
+- Setting up serving infrastructure
 - Understanding real tradeoffs between throughput, latency, and memory
 
 ---
@@ -52,6 +54,6 @@ This isn't a polished library—it's more like a lab notebook:
 
 ---
 
-### Resources
+### License
 
-- [NVIDIA TensorRT Quickstart Notebook Series](https://colab.research.google.com/github/NVIDIA/TensorRT/blob/main/quickstart/IntroNotebooks/0.%20Running%20This%20Guide.ipynb#scrollTo=pAKZqp7Qrjmq)
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
