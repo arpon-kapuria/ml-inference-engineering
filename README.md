@@ -2,7 +2,7 @@
 
 # ML Inference Engineering
 
-**A collection of experiments on model optimization, inference acceleration, quantization and serving.**
+**A collection of experiments on model optimization, inference acceleration, benchmarking and serving.**
 
 <p>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=FFD43B" alt="Python" /></a>
