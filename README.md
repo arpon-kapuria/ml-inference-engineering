@@ -1,59 +1,49 @@
-## ML Inference Engineering
+<div align="center">
 
-This repo is a collection of experiments around getting trained models to run fast in production. Most of the work focuses on what happens *after* training—exporting models, compiling them for specific hardware, squeezing out performance and actually serving them.
+# ML Inference Engineering
 
----
+**A collection of experiments on model optimization, inference acceleration, quantization and serving.**
 
-### Worklog
+<p>
+<a href="#"><img src="https://img.shields.io/badge/Experiments%20%7C%205-F37606" alt="Experiments" /></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=FFD43B" alt="Python" /></a>
+<a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch" /></a>
+<a href="https://onnx.ai/"><img src="https://img.shields.io/badge/ONNX-005CED?logo=onnx&logoColor=white" alt="ONNX" /></a>
+<a href="https://developer.nvidia.com/tensorrt"><img src="https://img.shields.io/badge/TensorRT-76B900?logo=nvidia&logoColor=white" alt="TensorRT" /></a>
+<a href="https://vllm.ai/"><img src="https://img.shields.io/badge/vLLM-3776AF?logo=vllm&logoColor=FFD43B" alt="vLLM" /></a>
+<a href="https://huggingface.co/"><img src="https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=black" alt="Hugging Face" /></a>
+</p>
 
-Running list of what's here. I'll add to this as I go.
+</div>
 
-- **Transformer Inference Acceleration: PyTorch to Torch-TensorRT**  *[[`Notebook`](transformer_torch_tensorrt.ipynb)]*<br>
-  Taking RoBERTa-base, compiling it with Torch-TensorRT in FP16 and FP32 modes, measuring the speedup and error analysis.  
+<br>
 
-- **Transformer Inference Acceleration: PyTorch to ONNX Export**  *[[`Notebook`](transformer_pytorch_onnx.ipynb)]*<br>
-  Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format and measuring the speedup and error analysis. 
-- **Transformer Inference Acceleration: PyTorch to ONNX to TensorRT** *[[`Notebook`](transformer_pytorch_onnx_tensorrt.ipynb)]*<br>
-  Taking a PyTorch Transformer model (RoBERTa-base), exporting it into ONNX format, then to TensorRT and measuring the speedup and error analysis.
-- **Model Optimization using LLM Compressor** *[[`Notebook`](model_optimization_llm_compressor.ipynb)]*<br>
-  See how **post-training quantization** works via full precision & compressed model comparisons. Use the `llm-compressor` library to apply a GPTQ recipe that produces a W4A16 quantized model. Test and evaluate the quantized model against the original
+## Worklog
 
-<sub><i>(Will grow over time)</i></sub>
+| Category                  | Experiment                                                                            | Description                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Transformer Inference** | **PyTorch → Torch-TensorRT** [[Notebook]](transformer_torch_tensorrt.ipynb)           | Compile RoBERTa-base with Torch-TensorRT (FP32/FP16), benchmark latency, and analyze output accuracy.           |
+| **Transformer Inference** | **PyTorch → ONNX** [[Notebook]](transformer_pytorch_onnx.ipynb)                       | Export RoBERTa-base to ONNX and evaluate inference performance and numerical differences.                       |
+| **Transformer Inference** | **PyTorch → ONNX → TensorRT** [[Notebook]](transformer_pytorch_onnx_tensorrt.ipynb)   | Convert a PyTorch model to ONNX and TensorRT, then benchmark speed and output fidelity.                         |
+| **Model Optimization**    | **LLM Compressor (GPTQ W4A16)** [[Notebook]](model_optimization_llm_compressor.ipynb) | Apply post-training quantization and compare compressed and full-precision models.                              |
+| **LLM Serving**           | **vLLM Inference Server** [[Notebook]](serving_llms_with_vllm.ipynb)                  | Deploy a vLLM server and explore continuous batching, KV cache management, prefix caching, and serving metrics. |
 
----
 
-### What's in here
+## Topics
 
-Stuff I'm working on or have tried:
+- Post-Training Workflows
+- Model Optimization & Quantization
+- Inference Acceleration
+- LLM Serving & Deployment
+- Benchmarking & Profiling
+- Throughput, Latency & Memory Trade-offs
 
-- Building inference pipelines from checkpoints
-- Exporting models to ONNX, TorchScript, and other formats
-- Efficient model optimization and serving
-- Quantization and figuring out what breaks
-- Benchmarking and profiling to see where time actually goes
-- Setting up serving infrastructure
-- Understanding real tradeoffs between throughput, latency, and memory
 
----
-
-### How it's organized
-
-This isn't a polished library—it's more like a lab notebook:
-
-- **Notebooks** for trying things out and showing results
-- **Scripts** for benchmarks and repeatable experiments
-- **Config files** for serving setups
-- **Notes** on what worked, what didn't, and why
-
----
-
-### Notes
+## Notes
 
 - This is ongoing work—some things are half-finished
 - Code here is for learning and experimentation, not necessarily production-ready
 
----
-
-### License
+## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
