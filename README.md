@@ -5,7 +5,6 @@
 **A collection of experiments on model optimization, inference acceleration, quantization and serving.**
 
 <p>
-<a href="#"><img src="https://img.shields.io/badge/Experiments%20%7C%205-F37606" alt="Experiments" /></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=FFD43B" alt="Python" /></a>
 <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch" /></a>
 <a href="https://onnx.ai/"><img src="https://img.shields.io/badge/ONNX-005CED?logo=onnx&logoColor=white" alt="ONNX" /></a>
@@ -22,12 +21,14 @@
 
 | Category                  | Experiment                                                                            | Description                                                                                                     |
 | ------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Transformer Inference** | **PyTorch → Torch-TensorRT** [[Notebook]](transformer_torch_tensorrt.ipynb)           | Compile RoBERTa-base with Torch-TensorRT (FP32/FP16), benchmark latency, and analyze output accuracy.           |
-| **Transformer Inference** | **PyTorch → ONNX** [[Notebook]](transformer_pytorch_onnx.ipynb)                       | Export RoBERTa-base to ONNX and evaluate inference performance and numerical differences.                       |
-| **Transformer Inference** | **PyTorch → ONNX → TensorRT** [[Notebook]](transformer_pytorch_onnx_tensorrt.ipynb)   | Convert a PyTorch model to ONNX and TensorRT, then benchmark speed and output fidelity.                         |
+| **Inference Acceleration** | **PyTorch → Torch-TensorRT** [[Notebook]](transformer_torch_tensorrt.ipynb)           | Compile RoBERTa-base with Torch-TensorRT (FP32/FP16), benchmark latency, and analyze output accuracy.           |
+| **Inference Acceleration** | **PyTorch → ONNX** [[Notebook]](transformer_pytorch_onnx.ipynb)                       | Export RoBERTa-base to ONNX and evaluate inference performance and numerical differences.                       |
+| **Inference Acceleration** | **PyTorch → ONNX → TensorRT** [[Notebook]](transformer_pytorch_onnx_tensorrt.ipynb)   | Convert a PyTorch model to ONNX and TensorRT, then benchmark speed and output fidelity.                         |
 | **Model Optimization**    | **LLM Compressor (GPTQ W4A16)** [[Notebook]](model_optimization_llm_compressor.ipynb) | Apply post-training quantization and compare compressed and full-precision models.                              |
 | **LLM Serving**           | **vLLM Inference Server** [[Notebook]](serving_llms_with_vllm.ipynb)                  | Deploy a vLLM server and explore continuous batching, KV cache management, prefix caching, and serving metrics. |
+| **Benchmarking & Evaluation** | **GuideLLM and LM Evaluation** [[Notebook]](benchmarking_evaluation_vllm.ipynb) | Benchmark vLLM deployment's latency and throughput using GuideLLM, evaluate model quality with LM Evaluation Harness, and analyze performance–quality trade-offs for deployment decisions. |
 
+<sub><i>( Will grow over time )</i></sub>
 
 ## Topics
 
